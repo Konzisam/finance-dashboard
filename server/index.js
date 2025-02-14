@@ -31,11 +31,13 @@ app.use("/transaction", transactionRoutes);
 
 /* MONGOOSE SETUP */
 const MONGO_URL = process.env.MONGO_URL;
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 9000;
+
+console.log('MONGO_URL:', MONGO_URL);
+console.log('MONGO_URL:', PORT);
 
 if (!MONGO_URL) {
   console.error('MONGO_URL is not defined!');
-  console.log(MONGO_URL);
 }
 
 mongoose
