@@ -30,9 +30,16 @@ app.use("/product", productRoutes);
 app.use("/transaction", transactionRoutes);
 
 /* MONGOOSE SETUP */
-const PORT = process.env.PORT || 9000;
+const MONGO_URL = process.env.MONGO_URL;
+const PORT = process.env.PORT || 8080;
+
+if (!MONGO_URL) {
+  console.error('MONGO_URL is not defined!');
+  process.exit(1); // Exit if the URL is not set
+}
+
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
