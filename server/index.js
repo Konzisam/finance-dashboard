@@ -35,7 +35,7 @@ const PORT = process.env.PORT || 8080;
 
 if (!MONGO_URL) {
   console.error('MONGO_URL is not defined!');
-  console.log(MONGO_URL)
+  console.log(MONGO_URL);
 }
 
 mongoose
