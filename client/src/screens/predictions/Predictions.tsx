@@ -1,7 +1,5 @@
-import React, { useMemo, useState } from "react";
 import { useGetKpisQuery } from "../../state/api";
 import { Box, Button, Typography, useTheme } from "@mui/material";
-import { Dashboard } from "@mui/icons-material";
 import DashboardBox from "../../components/DashboardBox";
 import FlexBetween from "../../components/FlexBetween";
 import {
@@ -16,6 +14,7 @@ import {
   YAxis,
 } from "recharts";
 import regression, { DataPoint } from "regression";
+import { useMemo, useState } from "react";
 
 const Predictions = () => {
   const { palette } = useTheme();
@@ -26,7 +25,7 @@ const Predictions = () => {
     if (!kpiData) return [];
     const monthData = kpiData[0].monthlyData;
 
-    const formatted: Array<DataPoint> = monthData.map(({ month, revenue }, i: number)  => {
+    const formatted: Array<DataPoint> = monthData.map(({ revenue }, i: number)  => {
       return [i, revenue]
     });
 

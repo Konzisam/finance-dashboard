@@ -1,4 +1,3 @@
-import React, { useMemo } from "react";
 import DashboardBox from "../../components/DashboardBox";
 import {
   useGetKpisQuery,
@@ -7,13 +6,13 @@ import {
 } from "../../state/api";
 import { DataGrid, GridCellParams } from "@mui/x-data-grid";
 import Boxheader from "../../components/Boxheader";
-import { Box, colors, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import FlexBetween from "../../components/FlexBetween";
 import { Cell, Pie, PieChart } from "recharts";
+import { useMemo } from "react";
 
-type Props = {};
 
-const Row3 = (props: Props) => {
+const Row3 = () => {
   const { palette } = useTheme();
   const pieColors = [palette.primary[800], palette.primary[500]];
   const { data: kpiData } = useGetKpisQuery();
@@ -175,7 +174,7 @@ const Row3 = (props: Props) => {
                   paddingAngle={2}
                   dataKey="value"
                 >
-                  {data.map((entry, index) => (
+                  {data.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={pieColors[index]} />
                   ))}
                 </Pie>
