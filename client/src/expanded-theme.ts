@@ -11,7 +11,4 @@ declare module "@mui/material/styles/createPalette" {
     tertiary: PaletteColor;
   }
 
-  interface PaletteOptions {
-    tertiary?: PaletteColor;
-  }
 }
