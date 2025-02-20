@@ -7,11 +7,11 @@ This project is a full-stack finance dashboard designed to track and visualize a
 The frontend of the application is built with React, offering a dynamic and interactive UI for displaying financial data. The use of React Query allows efficient data fetching, caching, and real-time updates, ensuring that financial data remains up-to-date with minimal API calls.
 
 ### Key Aspects
-**Charting**: Implemented **Recharts** for visualizing financial performance metrics.
-**Material UI**: For creating tables and Icons (one of my favourite libraries as am not a designer)
-**State Management**: Primarily handled using React Query, reducing the need for state.
-**Responsive UI**: Designed to be fully responsive for desktop and mobile users.
-**Backend** - Express & Node.js
+* **Charting**: Implemented **Recharts** for visualizing financial performance metrics.
+* **Material UI**: For creating tables and Icons (one of my favourite libraries as am not a designer)
+* **State Management**: Primarily handled using React Query, reducing the need for state.
+* **Responsive UI**: Designed to be fully responsive for desktop and mobile users.
+* **Backend** - Express & Node.js
 The backend is built using Node.js with Express.js, acting as a RESTful API that interacts with the database and serves financial data to the frontend.
 
 ### Key Features:
