@@ -1,4 +1,4 @@
-# Finance Dashboard - Full Stack Application
+## Finance Dashboard - Full Stack Application
 ## Overview
 This project is a full-stack finance dashboard designed to track and visualize a company's performance. The dashboard provides key financial insights such as revenue, expenses, profit margins, and other performance indicators. The goal was to gain hands-on experience with React, React Query, Node.js, Express, and MongoDB while also exploring real-time data fetching, and financial data visualization from a data analyst’s perspective.
 
